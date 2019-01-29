@@ -8,6 +8,14 @@ Class {
 }
 
 { #category : #greetings }
+ObjectA >> bye [
+	"comment stating purpose of message"
+
+	
+	^ 'good nite'
+]
+
+{ #category : #greetings }
 ObjectA >> helloWorld [
 	^ 'hello'
 ]
