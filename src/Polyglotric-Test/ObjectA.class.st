@@ -7,6 +7,14 @@ Class {
 	#category : #'Polyglotric-Test'
 }
 
+{ #category : #greetings }
+ObjectA >> bye [
+	"comment stating purpose of message"
+
+	
+	^ 'good nite'
+]
+
 { #category : #example }
 ObjectA >> exampleOfConceptOfIfAvoidance [
 	"comment stating purpose of message"
