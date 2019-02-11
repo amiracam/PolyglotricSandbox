@@ -13,6 +13,26 @@ PostgresTest >> setUp [
 ]
 
 { #category : #tests }
+PostgresTest >> testLongerQuery [
+	| response time sql |
+	"'psql://username:password@localhost:5432/databasename'"
+	sql := 'select * from tb_acct_mbscc where mbscc_id = ''LORD'' '.
+	time := Time
+		millisecondsToRun: [ response := (P3Client new
+				url: 'psql://TEST_TBOCMI_ADMIN1:ADMIN1@192.168.40.106:5432/TEST_TBOCMI')
+				in: [ :client | 
+					[ client query: sql ]
+						ensure: [ client close ]
+					]
+			].
+	Transcript
+		show:
+			'Time to run query: ' , sql, ' = '
+				, time printString;
+		cr
+]
+
+{ #category : #tests }
 PostgresTest >> testQuery [
 	| response time |
 	"'psql://username:password@localhost:5432/databasename'"
