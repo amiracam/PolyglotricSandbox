@@ -7,6 +7,34 @@ Class {
 	#category : #'Polyglotric-Test'
 }
 
+{ #category : #convenience }
+ObjectA >> ---> other [
+	"comment stating purpose of message"
+
+	^ other
+]
+
+{ #category : #convenience }
+ObjectA >> --> other [
+	"comment stating purpose of message"
+
+	^ other
+]
+
+{ #category : #convenience }
+ObjectA >> -> other [
+	"comment stating purpose of message"
+
+	^ other
+]
+
+{ #category : #convenience }
+ObjectA >> ? other [
+	"self car ? model"
+
+	^ other
+]
+
 { #category : #greetings }
 ObjectA >> bye [
 	"comment stating purpose of message"
@@ -34,4 +62,12 @@ ObjectA >> exampleOfConceptOfIfAvoidance [
 { #category : #greetings }
 ObjectA >> helloWorld [
 	^ 'hello'
+]
+
+{ #category : #convenience }
+ObjectA >> true: this then: that [
+	"comment stating purpose of message"
+
+	| other |
+	^ other
 ]
